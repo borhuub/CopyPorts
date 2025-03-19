@@ -4,5 +4,4 @@
 
 </div>
 
-
-Este script es una herramienta para ayudarnos a copiarnos los puertos a nuestro portapapeles sacados en el primer escaneo rápido de nmap.
+Este script es una herramienta para ayudarnos a copiarnos los puertos sacados en el primer escaneo rápido de nmap a nuestro portapapeles.
