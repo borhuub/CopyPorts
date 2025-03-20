@@ -1,4 +1,3 @@
-#Script que te copie al portapapeles los puertos que se han detectado en el nmap exportado a un archivo grepeable.
 import argparse
 import re
 import subprocess
@@ -14,7 +13,6 @@ def puertos():
             for l in f:
                 if "Ports:" in l:
                     linea = l
-                    print(linea)
                     break
     except FileNotFoundError:
         print("No se ha encontrado el archivo.")
@@ -26,12 +24,13 @@ def puertos():
         print("Error desconocido.")
         exit(1)
 
+    lista = re.findall(r"(\d{1,5})/", linea)
+    ports = ",".join(lista)
+    subprocess.run(['xclip', '-selection', 'clipboard'], input=ports, text=True)
 
-    ports = re.findall(r"(\d{1,5})/", linea) #Captura los numeros de la lina mediante expresiones regulares
-    ports = [port.strip() for port in ports] #Quita los espacios
-    ports = ",".join(ports) #Convierte la lista a una string separada por comas
-    print(ports)
-
-    subprocess.run(['xclip', '-selection', 'clipboard'], input=ports, text=True) #Ejecutamos xclip con subprocess en el que copiamos al portapapeles lo que hay en la variable ports
+    print("\n\033[1;34m" + "🔍 Puertos encontrados: " + "\033[0m")
+    for puerto in lista:
+        print(f"  ➜ \033[1;32m {puerto} \033[0m")
+    print("\n\033[1;34m¡Puertos copiados en el portapapeles!\033[0m")
 
 puertos()
