@@ -7,7 +7,7 @@
 <p>Este script es una herramienta para ayudarnos a copiarnos los puertos sacados en el primer escaneo rápido de nmap a nuestro portapapeles.</p>
 <p>(!)Este script solo esta pensado para ser ejecutado en Linux(!)</p>
 
-<h2>Uso:</h2>
+<h2>Descarga:</h2>
 <pre>
   cd /Downloads
 </pre>
@@ -19,7 +19,7 @@
   sudo mv CopyPorts/ports.py /usr/local/bin
 </pre>
 
-<h3> Ejemplo </h3>
+<h3>Ejemplo de uso:</h3>
 <pre>
-  ports.py puertos
+  ports.py "archivo"
 </pre>
