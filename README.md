@@ -9,7 +9,7 @@
 
 <h2>Descarga:</h2>
 <pre>
-  cd /Downloads
+  cd Downloads
 </pre>
 <pre>
   git clone https://github.com/borhuub/CopyPorts
