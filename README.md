@@ -9,5 +9,17 @@
 
 <h2>Uso:</h2>
 <pre>
-python3 ports.py "archivo"
+  cd /Downloads
+</pre>
+<pre>
+  git clone https://github.com/borhuub/CopyPorts
+</pre>
+<pre>
+  chmod +x CopyPort/ports.py
+  sudo mv CopyPorts/ports.py /usr/local/bin
+</pre>
+
+<h3> Ejemplo </h3>
+<pre>
+  ports.py puertos
 </pre>
